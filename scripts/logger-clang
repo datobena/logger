@@ -2,6 +2,6 @@
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 SO_DEFAULT="$SCRIPT_DIR/../build/passes/LoggerPass.so"
 SO_PATH=${LOGGER_PASS_SO:-$SO_DEFAULT}
-exec clang -fpass-plugin="$SO_PATH" "$@"
+exec clang-18 -fpass-plugin="$SO_PATH" "$@"
 
 
